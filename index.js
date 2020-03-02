@@ -25,9 +25,10 @@ function search () {
     };
 
     // UNDERSTAND THE FOLLOWING
-    endpoint = // who (www.example.com) - what server
-    query = // what data do you want
-    the_url = // who (www.example.com) + what (query)
+    endpoint = "api.openweathermap.org/data/2.5/weather?";         // who (www.example.com) - what server
+    query = "q={city name}";                                    // what data do you want
+    key = "&appid=7816d9f235c88adc096427a68ca872f2";         //key to identify yourself to the server : who is asking for data?
+    the_url = endpoint + query + key                        // ELEMENTS FOR ALL API CALLS (maybe not key if api is public)
     api_request.open ("GET", the_url, true); // ADMIT "GET" AND "true"
     api_request.send()
     
